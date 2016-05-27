@@ -15,3 +15,8 @@ Deface::Override.new( :virtual_path  => 'spree/shared/_header',
                       :name => 'Remove_seconde header',
                       :remove => '#spree-header > .container',
                       :disabled => false) 
+Deface::Override.new( :virtual_path  => '../../helpers',
+                      :name => 'Change the cart text',
+                      :replace => '#link-to-cart',
+                      :text => "<noscript><%= link_to Spree.t(:cart), '/cart' %></noscript>&nbsp;",
+                      :disabled => false) 
