@@ -19,6 +19,7 @@ module ToySpree
       Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
+
     end
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -35,5 +36,6 @@ module ToySpree
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
   end
 end
