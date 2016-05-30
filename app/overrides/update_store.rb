@@ -7,7 +7,7 @@ Deface::Override.new( :virtual_path  => 'spree/shared/_products',
                       :name => 'Insert description',
                       :insert_before => '.panel-footer',
                       :text => '<div class="panel-footer text-center">
-                                  <span itemprop="description">
+                                  <span itemprop="description" class="no-border">
                                     <span class="price selling lead"><%= product.description %></span>
                                   </span>
                                 </div>',
@@ -15,23 +15,25 @@ Deface::Override.new( :virtual_path  => 'spree/shared/_products',
 Deface::Override.new( :virtual_path  => 'spree/shared/_products',
                       :name => 'Insert stock',
                       :replace => '[itemprop="offers"]',
-                      :text => '<span itemprop="description">
-                                  <span class="price selling lead">
-                                    <%= "Estoque: #{ 
-                                      if product.stock_items[0]["count_on_hand"] == 0 
-                                        "Esgotado :(" 
-                                      elsif product.stock_items[0]["count_on_hand"] == 1
-                                        "Um" 
-                                      elsif product.stock_items[0]["count_on_hand"] == 2
-                                        "Dois" 
-                                      elsif product.stock_items[0]["count_on_hand"] == 3
-                                        "Três"
-                                      elsif product.stock_items[0]["count_on_hand"] == 4
-                                        "Quatro"
-                                      else
-                                        "Muitos :)"
-                                      end
-                                    }" %>
-                                  </span>
+                      :text => '<span itemprop="description" class="no-border">
+                                  <%= link_to url, itemprop: "url" do %>
+                                    <span class="price selling lead link-to-product">
+                                      <%= "Estoque: #{ 
+                                        if product.stock_items[0]["count_on_hand"] == 0 
+                                          "Esgotado :(" 
+                                        elsif product.stock_items[0]["count_on_hand"] == 1
+                                          "Um" 
+                                        elsif product.stock_items[0]["count_on_hand"] == 2
+                                          "Dois" 
+                                        elsif product.stock_items[0]["count_on_hand"] == 3
+                                          "Três"
+                                        elsif product.stock_items[0]["count_on_hand"] == 4
+                                          "Quatro"
+                                        else
+                                          "Muitos :)"
+                                        end
+                                      }" %>
+                                    </span>
+                                  <% end %>
                                 </span>',
                       :disabled => false)

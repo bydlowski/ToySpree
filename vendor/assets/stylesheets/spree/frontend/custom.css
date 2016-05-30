@@ -50,3 +50,38 @@ body {
 #quantity {
 	width: 4.5em;
 }
+.panel {
+	background-color: #ffe6e6;
+	border-top: 1px solid #ffe6e6;
+	box-shadow: none;
+}
+.panel-default {
+	border-color: #ffe6e6;;
+}
+.panel-footer {
+	background-color: #ffe6e6;
+	border-top: 1px solid #ffe6e6;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+/** Image fits div and cuts bottom **/
+.product-body {
+	overflow: hidden;
+}
+.product-body img {
+	width: 100%;
+}
+/** Button in store front **/
+.no-border a:hover {
+	text-decoration: none;
+}
+.link-to-product {
+	background-color: red;
+	color: white;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	border: 2px solid white;
+}
+.link-to-product:hover {
+	background-color: coral;
+}
