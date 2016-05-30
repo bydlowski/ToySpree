@@ -1,17 +1,19 @@
 body {
 	background: #ffe6e6;
 }
+/** HEADER **/
 #spree-header {
 	background: #ffe6e6;
+	margin-bottom: 0;
 }
 #spree-header #header {
-	background: rgba(255, 255, 255, 0.1);
-	padding: 40px 0;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 5vh 0 3vh 0;
 	font-family: 'Lato', sans-serif;
 	font-size: 3vmin;
 }
 #logo {
-	margin-top: -20px;
+	margin-top: -2vh;
 }
 #link-to-cart {
 	float:left;
@@ -50,6 +52,9 @@ body {
 }
 #quantity {
 	width: 4.5em;
+}
+.lead {
+    font-size: 1.7em;
 }
 /** SLIDER **/
 .flexslider {
@@ -99,6 +104,19 @@ body {
 }
 .prod-stock {
 	font-family: 'Lato';
-	font-size: 3vmin;
+	font-size: 1.4em;
 	line-height: 10vh;
+}
+/** Footer **/
+#footer{
+	position: absolute;
+	height: 5vh;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.7);
+}
+.footer-container {
+	padding: 1em;
+}
+.footer-container span {
+	padding: 0 1em;
 }
