@@ -13,10 +13,20 @@ Deface::Override.new( :virtual_path  => 'spree/shared/_products',
                                 </div>',
                       :disabled => false)
 Deface::Override.new( :virtual_path  => 'spree/shared/_products',
+                      :name => 'Change image size',
+                      :replace => '.panel-body',
+                      :text => ' <div class="panel-body text-center product-body">
+                                  <%= link_to url, itemprop: "url" do %>
+                                    <%= product_image(product, itemprop: "image") %><br/>
+                                  <% end %>
+                                  <br/>
+                                </div>',
+                      :disabled => false)
+Deface::Override.new( :virtual_path  => 'spree/shared/_products',
                       :name => 'Insert stock',
                       :replace => '[itemprop="offers"]',
                       :text => '<span itemprop="description" class="no-border">
-                                  <%= link_to url, itemprop: "url" do %>
+                                  <%= link_to url, itemprop: "newurl" do %>
                                     <span class="price selling lead link-to-product">
                                       <%= "Estoque: #{ 
                                         if product.stock_items[0]["count_on_hand"] == 0 
