@@ -1,5 +1,14 @@
 body {
 	background: #ffe6e6;
+	height: 100%;
+	margin: 0;
+}
+html {
+    padding-bottom: 50px;
+    min-height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
 }
 /** HEADER **/
 #spree-header {
@@ -110,13 +119,28 @@ body {
 /** Footer **/
 #footer{
 	position: absolute;
-	height: 5vh;
 	width: 100%;
 	background: rgba(255, 255, 255, 0.7);
+	bottom: 0;
 }
 .footer-container {
 	padding: 1em;
 }
 .footer-container span {
 	padding: 0 1em;
+}
+.right {
+	right: 0px;
+	position: absolute;
+}
+/** About **/
+.about-container {
+	width: 75%;
+	margin: auto;
+}
+.about-container h1, h2 {
+	text-align: center;
+}
+.about-container h2 {
+	padding: 1em;
 }
