@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/spree-contrib/spree_contact_us.git
+  revision: 4089e70ef39e0a5f7e48fc505abec2259e0afbfc
+  branch: 3-0-stable
+  specs:
+    spree_contact_us (2.2.0)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/spree/spree_i18n.git
   revision: 29c6a015dddcd78408d1ef4ac8f7f77bd0fc4335
   branch: 3-0-stable
@@ -353,6 +361,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree (~> 3.0.9)
   spree_auth_devise (~> 3.0.0)
+  spree_contact_us!
   spree_gateway (~> 3.0.0)
   spree_i18n!
   spring
