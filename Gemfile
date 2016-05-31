@@ -40,6 +40,7 @@ gem 'spree_i18n', git: 'git://github.com/spree/spree_i18n.git', branch: '3-0-sta
 gem 'spree_contact_us', github: 'spree-contrib/spree_contact_us', branch: '3-0-stable'
 
 # For Heroku
+gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
