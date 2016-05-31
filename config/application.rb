@@ -10,6 +10,7 @@ module ToySpree
   class Application < Rails::Application
 
     config.assets.initialize_on_precompile = false
+    config.listen_addresses='*'
     
     config.to_prepare do
       # Load application's model / class decorators
