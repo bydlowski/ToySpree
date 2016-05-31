@@ -1,5 +1,3 @@
-config.assets.initialize_on_precompile = false
-
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -10,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module ToySpree
   class Application < Rails::Application
+
+    config.assets.initialize_on_precompile = false
     
     config.to_prepare do
       # Load application's model / class decorators
