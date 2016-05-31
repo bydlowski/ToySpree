@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  Precompile.ignore { ActiveAdmin.routes(self) }
-
   get '/sobre' => 'spree/home#sobre', :as => :sobre
   
   # This line mounts Spree's routes at the root of your application.
